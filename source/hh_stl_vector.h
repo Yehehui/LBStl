@@ -77,6 +77,12 @@ public:
     bool empty() const {
         return finish == start;
     }
+    reference at(size_type pos) {
+        return *(start + pos);
+    }
+    const_reference at(size_type pos) const {
+        return *(start + pos);
+    }
     reference operator[](size_type n) {
         return *(start + n);
     }
